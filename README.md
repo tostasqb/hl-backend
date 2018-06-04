@@ -10,10 +10,6 @@ That's it!
 
 On June 2, 2018 following [this tutorial](https://www.pluralsight.com/guides/token-based-authentication-with-ruby-on-rails-5-api).
 
-# Usefull information
-
-- [Encrypted credentials in Rails 5.2](https://blog.botreetechnologies.com/encrypted-credentials-a-new-way-to-use-secrets-in-rails-5-2-eca929629bb4)
-
 # How to call
 
         # create a user
