@@ -12,9 +12,11 @@
 
 ActiveRecord::Schema.define(version: 2018_06_02_163553) do
 
-  create_table "items", force: :cascade do |t|
+  create_table "menu_items", force: :cascade do |t|
     t.string "name"
-    t.text "description"
+    t.string "belongs_to"
+    t.text "link"
+    t.integer "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,6 +1,8 @@
 # Getting started
 
 - Rename the .env and provide the infomation requested there.
+- rails db:migrate
+- rails db:seed
 - `rails s`
 - Follow the "How to call" section below
 
