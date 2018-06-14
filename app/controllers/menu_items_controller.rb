@@ -1,21 +1,21 @@
-class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :update, :destroy]
+class MenuItemsController < ApplicationController
+  before_action :set_menu_item, only: [:show, :update, :destroy]
 
-  # GET /items
+  # GET /menu_items
   def index
-    @items = Item.all
+    @menu_items = MenuItem.all
 
-    render json: @items
+    render json: @menu_items
   end
 
-  # GET /items/1
+  # GET /menu_items/1
   def show
     render json: @item
   end
 
-  # POST /items
+  # POST /menu_items
   def create
-    @item = Item.new(item_params)
+    @item = MenuItem.new(menu_item_params)
 
     if @item.save
       render json: @item, status: :created, location: @item
@@ -24,28 +24,28 @@ class ItemsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /items/1
+  # PATCH/PUT /menu_items/1
   def update
-    if @item.update(item_params)
+    if @item.update(menu_item_params)
       render json: @item
     else
       render json: @item.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /items/1
+  # DELETE /menu_items/1
   def destroy
     @item.destroy
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_item
-      @item = Item.find(params[:id])
+    def set_menu_item
+      @item = MenuItem.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
-    def item_params
+    def menu_item_params
       params.require(:item).permit(:name, :description)
     end
 end

@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :items
+  resources :menu_items
   post 'authenticate', to: 'authentication#authenticate'
 end
