@@ -1,5 +1,5 @@
 class MenuItemsController < ApplicationController
-  before_action :set_menu_item, only: [:show, :update, :destroy]
+  before_action :set_menu_item, only: %i[show update destroy]
 
   # GET /menu_items
   def index
@@ -39,13 +39,14 @@ class MenuItemsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_menu_item
-      @item = MenuItem.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def menu_item_params
-      params.require(:item).permit(:name, :description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_menu_item
+    @item = MenuItem.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def menu_item_params
+    params.require(:item).permit(:name, :description)
+  end
 end
