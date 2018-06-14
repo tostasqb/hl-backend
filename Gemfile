@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test] # good to maintain up top
 
 ruby '2.5.1'
-
 gem 'rails', '~> 5.2.0'
-gem 'sqlite3'
+
+gem 'pg', group: :production
+gem 'sqlite3', group: :development
+
 gem 'puma', '~> 3.11'
 
 gem 'bcrypt', '~> 3.1.7'
