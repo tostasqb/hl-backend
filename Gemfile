@@ -1,8 +1,7 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 gem 'dotenv-rails', groups: [:development, :test] # good to maintain up top
 
-ruby '2.5.1'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.1.1'
 
 gem 'pg', group: :production
 gem 'sqlite3', group: :development
@@ -23,8 +22,8 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop'
+  gem 'listen'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
