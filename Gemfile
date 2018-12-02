@@ -1,4 +1,6 @@
 source 'http://rubygems.org'
+ruby '2.5.3'
+
 gem 'dotenv-rails', groups: [:development, :test] # good to maintain up top
 
 gem 'rails', '~> 5.2.1.1'
