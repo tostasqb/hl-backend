@@ -28,3 +28,14 @@ On June 2, 2018 following [this tutorial](https://www.pluralsight.com/guides/tok
         # Call with authorization
         curl -H "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE0NjA2NTgxODZ9.xsSwcPC22IR71OBv6bU_OGCSyfE89DvEzWfDU0iybMA" http://localhost:3000/menu_items
         > []
+
+# Test the deploy
+
+        # running
+        curl http://api,highline.com.pt/ping
+
+        # user authenticated
+        curl http://api,highline.com.pt/ping_auth
+
+        # database connected
+        curl http://api,highline.com.pt/ping_db
