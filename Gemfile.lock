@@ -56,6 +56,8 @@ GEM
       dotenv (= 2.5.0)
       railties (>= 3.2, < 6.0)
     erubi (1.7.1)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -80,6 +82,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     msgpack (1.2.4)
+    multipart-post (2.0.0)
     nio4r (2.3.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
@@ -131,6 +134,8 @@ GEM
       unicode-display_width (~> 1.4.0)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
+    sentry-raven (2.9.0)
+      faraday (>= 0.7.6, < 1.0)
     simple_command (0.0.9)
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
@@ -163,9 +168,13 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.1.1)
   rubocop
+  sentry-raven
   simple_command
   sqlite3
   tzinfo-data
+
+RUBY VERSION
+   ruby 2.5.3p105
 
 BUNDLED WITH
    1.17.1

@@ -1,17 +1,17 @@
 require_relative 'boot'
 
-require "rails"
+require 'rails'
 # Pick the frameworks you want:
-require "active_model/railtie"
-require "active_job/railtie"
-require "active_record/railtie"
-require "active_storage/engine"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
-require "action_cable/engine"
-# require "sprockets/railtie"
-require "rails/test_unit/railtie"
+require 'active_model/railtie'
+require 'active_job/railtie'
+require 'active_record/railtie'
+require 'active_storage/engine'
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'action_view/railtie'
+require 'action_cable/engine'
+# require 'sprockets/railtie'
+require 'rails/test_unit/railtie'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -32,5 +32,12 @@ module HlBackend
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.filter_parameters << :password
   end
+end
+
+Raven.configure do |config|
+  config.dsn = "https://99dce23ceb034730ac64570ca4d10d66:#{SENTRY_DSN}@sentry.io/1380113"
+  config.sanitize_fields = Rails.application.config.filter_parameters.map(&:to_s)
 end

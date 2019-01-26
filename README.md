@@ -32,10 +32,10 @@ On June 2, 2018 following [this tutorial](https://www.pluralsight.com/guides/tok
 # Test the deploy
 
         # running
-        curl http://api,highline.com.pt/ping
+        curl http://api.highline.com.pt/ping
 
         # user authenticated
-        curl http://api,highline.com.pt/ping_auth
+        curl http://api.highline.com.pt/ping_auth
 
         # database connected
-        curl http://api,highline.com.pt/ping_db
+        curl http://api.highline.com.pt/ping_db
