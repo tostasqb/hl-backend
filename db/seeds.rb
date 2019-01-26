@@ -6,3 +6,11 @@ if User.first.nil?
     password_confirmation: ENV['AUTH_PASSWORD']
   )
 end
+
+if MenuItem.first.nil?
+  MenuItem.create(title: 'Product One', description: '2 retired monks walk into a bar')
+end
+
+if Product.first.nil?
+  Product.create(title: 'Product One', description: '2 retired monks walk into a bar')
+end

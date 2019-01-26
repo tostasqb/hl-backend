@@ -13,6 +13,7 @@ gem 'puma', '~> 3.11'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 gem 'simple_command'
+gem 'graphql'
 
 gem 'sentry-raven'
 

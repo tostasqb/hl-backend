@@ -61,6 +61,7 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    graphql (1.8.13)
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.1)
@@ -162,6 +163,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   dotenv-rails
+  graphql
   jwt
   listen
   pg
