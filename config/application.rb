@@ -36,8 +36,3 @@ module HlBackend
     config.filter_parameters << :password
   end
 end
-
-Raven.configure do |config|
-  config.dsn = "https://99dce23ceb034730ac64570ca4d10d66:#{SENTRY_DSN}@sentry.io/1380113"
-  config.sanitize_fields = Rails.application.config.filter_parameters.map(&:to_s)
-end
