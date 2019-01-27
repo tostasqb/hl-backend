@@ -8,9 +8,11 @@ if User.first.nil?
 end
 
 if MenuItem.first.nil?
-  MenuItem.create(title: 'Product One', description: '2 retired monks walk into a bar')
+  MenuItem.create(name: 'Prestige', belongs_to: 'TECIDOS')
+  MenuItem.create(name: 'Look', belongs_to: 'TECIDOS')
 end
 
 if Product.first.nil?
-  Product.create(title: 'Product One', description: '2 retired monks walk into a bar')
+  Product.create(menu_item_id: 1, title: 'Product One', description: 'First product description')
+  Product.create(menu_item_id: 1, title: 'Product two', description: 'Another product')
 end
