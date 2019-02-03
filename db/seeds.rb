@@ -15,4 +15,5 @@ end
 if Product.first.nil?
   Product.create(menu_item_id: 1, title: 'Product One', description: 'First product description')
   Product.create(menu_item_id: 1, title: 'Product two', description: 'Another product')
+  Product.create(menu_item_id: 1, title: 'Mardi grás III', description: 'Cor Mardi grás collection disponível em 5 cores')
 end
