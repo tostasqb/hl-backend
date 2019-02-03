@@ -2,6 +2,7 @@ class ApplicationController < ActionController::API
   before_action :authenticate_request
   before_action :set_default_response_format
   before_action :set_raven_context
+  before_action :allow_cors
 
   attr_reader :current_user
 
@@ -14,6 +15,14 @@ class ApplicationController < ActionController::API
 
   def set_default_response_format
     request.format = :json
+  end
+
+  def allow_cors
+    headers['Access-Control-Allow-Origin'] = Rails.env == 'production' ? ENV['CORS_DOMAIN'] : '*'
+    headers['Access-Control-Expose-Headers'] = 'ETag'
+    headers['Access-Control-Allow-Methods'] = 'GET, POST, PATCH, PUT, DELETE, OPTIONS, HEAD'
+    headers['Access-Control-Allow-Headers'] = '*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match'
+    headers['Access-Control-Max-Age'] = '86400'
   end
 
   def set_raven_context
