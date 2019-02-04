@@ -39,3 +39,4 @@ On June 2, 2018 following [this tutorial](https://www.pluralsight.com/guides/tok
 
         # database connected
         curl http://api.highline.com.pt/ping_db
+
