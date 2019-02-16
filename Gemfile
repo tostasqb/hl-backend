@@ -7,6 +7,7 @@ gem 'rails', '~> 5.2.1.1'
 
 gem 'pg', group: :production
 gem 'sqlite3', group: :development
+gem 'kaminari'
 
 gem 'puma', '~> 3.11'
 

@@ -4,7 +4,11 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.includes(:menu_item).all
+    conditions = index_params
+
+    @products = Product.includes(:menu_item)
+                       .page(conditions[:page] || 1)
+                       .per(conditions[:per_page] || 3)
 
     render 'products/index'
     # render json: @products
@@ -50,5 +54,9 @@ class ProductsController < ApplicationController
   # Only allow a trusted parameter "white list" through.
   def product_params
     params.require(:item).permit(:title, :description, :menu_item_id)
+  end
+
+  def index_params
+    params.permit(:page, :per_page, :format)
   end
 end
