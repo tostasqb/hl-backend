@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :menu_items
   resources :products
+  resources :ambiences
 
   get 'ping', to: 'ping#index'
   get 'ping_auth', to: 'ping#auth'

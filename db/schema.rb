@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_26_023318) do
+ActiveRecord::Schema.define(version: 2019_02_16_210237) do
+
+  create_table "ambiences", force: :cascade do |t|
+    t.integer "media_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["media_id"], name: "index_ambiences_on_media_id"
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.string "path"
+    t.string "filename"
+    t.string "folder"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "menu_items", force: :cascade do |t|
     t.string "name"
