@@ -8,6 +8,11 @@ gem 'rails_admin', '~> 1.3'
 
 gem 'pg', group: :production
 gem 'sqlite3', '~> 1.3.6', group: :development
+
+# active storage
+gem 'aws-sdk-s3', require: false
+gem "mini_magick"
+
 gem 'kaminari'
 
 gem 'puma', '~> 3.11'
