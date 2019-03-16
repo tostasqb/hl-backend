@@ -34,45 +34,38 @@ ActiveRecord::Schema.define(version: 2019_03_12_205702) do
   end
 
   create_table "ambiences", force: :cascade do |t|
-    t.integer "media_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["media_id"], name: "index_ambiences_on_media_id"
-  end
-
-  create_table "media", force: :cascade do |t|
-    t.string "path"
-    t.string "filename"
-    t.string "folder"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "menu_items", force: :cascade do |t|
+  create_table "product_tags", force: :cascade do |t|
+    t.integer "tag_id"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_product_tags_on_product_id"
+    t.index ["tag_id"], name: "index_product_tags_on_tag_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tag_groups", force: :cascade do |t|
     t.string "name"
-    t.string "belongs_to"
-    t.text "link"
     t.integer "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "products", force: :cascade do |t|
-    t.integer "menu_item_id"
-    t.string "title"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["menu_item_id"], name: "index_products_on_menu_item_id"
-  end
-
-  create_table "tag_groups", force: :cascade do |t|
-    t.string "name"
-  end
-
   create_table "tags", force: :cascade do |t|
     t.string "name"
     t.integer "tag_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["tag_group_id"], name: "index_tags_on_tag_group_id"
   end
 

@@ -1,10 +1,13 @@
 class Product < ApplicationRecord
-  belongs_to :menu_item
+  has_many :product_tags
+  has_many :tags, through: :product_tags
   has_many_attached :images
 
   default_scope { order(id: :desc) }
-
-  def menu
-    menu_item.name
+  
+  rails_admin do
+    configure :product_tags do
+      visible(false)
+    end
   end
 end

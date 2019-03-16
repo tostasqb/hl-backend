@@ -1,8 +1,7 @@
 class Ambience < ApplicationRecord
-  belongs_to :media
-  default_scope { order(id: :desc) }
+  has_one_attached :image
 
-  def file_path
-    media.folder.concat(media.filename)
-  end
+  # def url
+  #   url_for(:image)
+  # end
 end

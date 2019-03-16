@@ -10,6 +10,6 @@ class PingController < ApplicationController
   end
 
   def database
-    render json: { status: 'ok', menu_item: MenuItem.new }, status: 200
+    render json: { status: 'ok', product: Product.first }, status: 200
   end
 end
