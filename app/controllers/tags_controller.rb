@@ -4,6 +4,7 @@ class TagsController < ApplicationController
   # GET /tags
   def index
     @tags = Tag.all
+    @tag_groups = TagGroup.all
 
     render 'tags/index'
     # render json: @tags

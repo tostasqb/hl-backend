@@ -8,6 +8,16 @@
 
 That's it!
 
+## All with free resources (due to low traffic)
+
+- Heroku for app
+- AWS S3 for file repository
+- Rails Admin for backoffice
+- Cloudflare for https/caching/security
+- Uptimerobot for uptime alert (and prevents heroku sleep mode)
+- Sentry for error alerts
+
+
 # How this started
 
 On June 2, 2018 following [this tutorial](https://www.pluralsight.com/guides/token-based-authentication-with-ruby-on-rails-5-api).
