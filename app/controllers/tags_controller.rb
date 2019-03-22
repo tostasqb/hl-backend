@@ -4,7 +4,7 @@ class TagsController < ApplicationController
   # GET /tags
   def index
     @tags = Tag.all
-    @tag_groups = TagGroup.all
+    @tag_groups = TagGroup.order('ordar') # Nulls last
 
     render 'tags/index'
     # render json: @tags

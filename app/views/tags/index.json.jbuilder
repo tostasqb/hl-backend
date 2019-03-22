@@ -1,5 +1,5 @@
 json.tag_groups do
-  json.array! @tag_groups, :id, :name, :order
+  json.array! @tag_groups, :id, :name
 end
 
 json.tags do
