@@ -1,5 +1,5 @@
 class Tag < ApplicationRecord
-  has_many :product_tags
+  has_many :product_tags, dependent: :destroy
   has_many :products, through: :product_tags
   belongs_to :tag_group
 
@@ -9,6 +9,10 @@ class Tag < ApplicationRecord
 
   rails_admin do
     configure :product_tags do
+      visible(false)
+    end
+
+    configure :products do
       visible(false)
     end
   end
