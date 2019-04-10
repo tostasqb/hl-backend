@@ -5,6 +5,7 @@ gem 'dotenv-rails', groups: [:development, :test] # good to maintain up top
 
 gem 'rails', '~> 5.2'
 gem 'rails_admin', '~> 1.3'
+gem 'bootstrap-wysihtml5-rails', '> 0.3.1.24'
 
 gem 'pg', group: :production
 gem 'sqlite3', '~> 1.3.6', group: :development
