@@ -7,6 +7,7 @@ class AmbiencesController < ApplicationController
 
     @ambiences = Ambience.page(conditions[:page] || 1)
                          .per(conditions[:per_page] || 4)
+                         .order(id: :desc)
 
     render 'ambiences/index'
   end
