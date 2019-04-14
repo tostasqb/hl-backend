@@ -4,15 +4,14 @@ class PiecesController < ApplicationController
   # GET /pieces
   def index
     conditions = index_params
-    return render 'pieces/index' if conditions[:piece].blank?
+    return render json: [] if conditions[:piece].blank?
     
-    @pieces = Piece.where(key: conditions[:piece])
-
-    render 'pieces/index'
+    @pieces = Hash[Piece.where(key: conditions[:piece]).pluck(:key, :value)]
+    render json: @pieces
   end
 
 
   def index_params
-    params.permit(:piece, :format)
+    params.permit(:format, :piece => [])
   end
 end
