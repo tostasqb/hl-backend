@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  skip_before_action :authenticate_request, only: :index
+  skip_before_action :authenticate_request, only: [:index, :show]
   
   # GET /products
   def index
@@ -10,6 +10,13 @@ class ProductsController < ApplicationController
 
     render 'products/index'
     # render json: @products
+  end
+
+  def show
+    @product = Product.includes(:product_tags, :tags).find_by(id: params[:id])
+
+    render 'products/show'
+    # render json: @product
   end
 
   def index_params

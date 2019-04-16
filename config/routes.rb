@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/ambiences', to: 'ambiences#index'
   get '/pieces', to: 'pieces#index'
   get '/products', to: 'products#index'
+  get '/product/:id', to: 'products#show'
+  get '/product', to: 'products#show'
   get '/tags', to: 'tags#index'
 
   get 'ping', to: 'ping#index'
