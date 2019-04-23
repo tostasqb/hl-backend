@@ -1,4 +1,9 @@
-json.array! @products do |rec|
+json.pagination do 
+  json.page @products.total_pages
+  json.total @products.total_count
+end
+
+json.data @products do |rec|
   json.id rec.id
   json.title rec.title
   json.description rec.description
