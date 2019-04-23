@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   def index
     conditions = index_params
 
-    filter = JSON.parse(conditions[:filter])
+    filter = conditions[:filter] ? JSON.parse(conditions[:filter]) : {}
     filter.reject! { |a, v| v == false }
 
     @products = if filter.blank?
