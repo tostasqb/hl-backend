@@ -6,6 +6,9 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.main_app_name = ["High Line", "home decoration"]
+  config.excluded_models = ["User"]
+
   ### Popular gems integration
 
   ## == Devise ==

@@ -8,12 +8,31 @@ class Tag < ApplicationRecord
   end
 
   rails_admin do
-    configure :product_tags do
-      visible(false)
+    label 'Características ou Cores' 
+
+    field :id
+    field :name
+    field :tag_group
+    field :created_at
+
+    field :name do
+      label "nome"
     end
 
-    configure :products do
-      visible(false)
+    field :tag_group do
+      label "Categoria"
+    end
+    field :created_at do
+      label "Data de criação"
+    end
+
+    edit do
+      field :created_at do
+        visible(false)
+      end
+      field :id do
+        visible(false)
+      end
     end
   end
 end

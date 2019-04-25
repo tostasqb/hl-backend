@@ -6,6 +6,27 @@ class Product < ApplicationRecord
   default_scope { order(id: :desc) }
 
   rails_admin do
+    label 'Produto'
+
+    field :id
+    field :title
+    field :tags
+    field :image
+    field :updated_at
+
+    field :title do
+      label "Nome"
+    end
+    field :tags do
+      label "Características"
+    end
+    field :image do
+      label "Imagem"
+    end
+    field :updated_at do
+      label "Última actualização"
+    end
+
     configure :product_tags do
       visible(false)
     end
@@ -15,8 +36,16 @@ class Product < ApplicationRecord
     end
 
     edit do
+      field :updated_at do
+        visible(false)
+      end
+      field :id do
+        visible(false)
+      end
+
       field :title
       field :description, :wysihtml5 do
+        label "Descrição"
         config_options toolbar: { 
           fa: true, # use font-awesome instead of glyphicon
         }, 
