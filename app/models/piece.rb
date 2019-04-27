@@ -24,7 +24,7 @@ class Piece < ApplicationRecord
 
       field :value, :wysihtml5 do
         config_options toolbar: { 
-          fa: true, # use font-awesome instead of glyphicon
+          fa: true # use font-awesome instead of glyphicon
         }, 
         html: true, # enables html editor
         parserRules: { tags: { p:1 } } 
