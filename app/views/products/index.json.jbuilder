@@ -1,4 +1,4 @@
-json.pagination do 
+json.pagination do
   json.page @products.total_pages
   json.total @products.total_count
 end
