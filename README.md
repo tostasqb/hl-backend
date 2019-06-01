@@ -1,24 +1,23 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c8bee56cfd8d46ed8c351e31aba14c45)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tostasqb/hl-backend&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c8bee56cfd8d46ed8c351e31aba14c45)](https://www.codacy.com?utm_source=github.com&utm_medium=referral&utm_content=tostasqb/hl-backend&utm_campaign=Badge_Grade)
 
 # Getting started
 
-- Rename the .env and provide the infomation requested there.
-- rails db:migrate
-- rails db:seed
-- `rails s`
-- Follow the "How to call" section below
+-   Rename the .env and provide the infomation requested there.
+-   rails db:migrate
+-   rails db:seed
+-   `rails s`
+-   Follow the "How to call" section below
 
 That's it!
 
 ## All with free resources (due to low traffic)
 
-- Heroku for app
-- AWS S3 for file repository
-- Rails Admin for backoffice
-- Cloudflare for https/caching/security
-- Uptimerobot for uptime alert (and prevents heroku sleep mode)
-- Sentry for error alerts
-
+-   Heroku for app
+-   AWS S3 for file repository
+-   Rails Admin for backoffice
+-   Cloudflare for https/caching/security
+-   Uptimerobot for uptime alert (and prevents heroku sleep mode)
+-   Sentry for error alerts
 
 # How this started
 
@@ -51,4 +50,3 @@ On June 2, 2018 following [this tutorial](https://www.pluralsight.com/guides/tok
 
         # database connected
         curl http://api.highline.com.pt/ping_db
-

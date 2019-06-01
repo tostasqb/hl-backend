@@ -1,12 +1,12 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_request, only: [:index, :show]
-  
+
   # GET /products
   def index
     conditions = index_params
 
     filter = conditions[:filter] ? JSON.parse(conditions[:filter]) : {}
-    filter.reject! { |a, v| v == false }
+    filter.reject! { |_a, v| v == false }
 
     @products = if filter.blank?
                   Product.page(conditions[:page] || 1)

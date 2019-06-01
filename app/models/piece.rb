@@ -1,12 +1,12 @@
 class Piece < ApplicationRecord
   rails_admin do
-    label "Outras edições"
-    
+    label 'Outras edições'
+
     field :id
     field :key
 
     field :key do
-      label "Chave de Edição"
+      label 'Chave de Edição'
     end
 
     list do
@@ -15,7 +15,7 @@ class Piece < ApplicationRecord
 
     edit do
       field :key do
-        label "Chave de edição (Não mudar!)"
+        label 'Chave de edição (Não mudar!)'
       end
 
       field :id do
@@ -23,11 +23,9 @@ class Piece < ApplicationRecord
       end
 
       field :value, :wysihtml5 do
-        config_options toolbar: { 
-          fa: true # use font-awesome instead of glyphicon
-        }, 
-        html: true, # enables html editor
-        parserRules: { tags: { p:1 } } 
+        config_options toolbar: { fa: true },
+                       html: true, # enables html editor
+                       parserRules: { tags: { p: 1 } }
       end
     end
   end

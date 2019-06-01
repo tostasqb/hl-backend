@@ -18,6 +18,7 @@ class AmbiencesController < ApplicationController
   def image_size(device)
     return 1224 if device == 'desktop'
     return 800 if device == 'tablet'
+
     388
   end
 

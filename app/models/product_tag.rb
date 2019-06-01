@@ -14,26 +14,26 @@ class ProductTag < ApplicationRecord
     field :product
     field :tag
     field :created_at
-    
+
     field :image do
-      label "Imagem"
+      label 'Imagem'
     end
 
     field :created_at do
-      label "Data de criação"
+      label 'Data de criação'
     end
 
     field :product do
-      label "produto"
+      label 'produto'
     end
 
     field :tag do
-      label "Característica ou Cor"
+      label 'Característica ou Cor'
     end
 
     edit do
       field :tag do
-        label "Nome da Característica ou Cor (Criar se não existir)"
+        label 'Nome da Característica ou Cor (Criar se não existir)'
       end
 
       field :created_at do

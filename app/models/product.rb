@@ -15,16 +15,16 @@ class Product < ApplicationRecord
     field :updated_at
 
     field :title do
-      label "Nome"
+      label 'Nome'
     end
     field :tags do
-      label "Características"
+      label 'Características'
     end
     field :image do
-      label "Imagem"
+      label 'Imagem'
     end
     field :updated_at do
-      label "Última actualização"
+      label 'Última actualização'
     end
 
     configure :product_tags do
@@ -45,12 +45,10 @@ class Product < ApplicationRecord
 
       field :title
       field :description, :wysihtml5 do
-        label "Descrição"
-        config_options toolbar: { 
-          fa: true, # use font-awesome instead of glyphicon
-        }, 
-        html: true, # enables html editor
-        parserRules: { tags: { p:1 } } 
+        label 'Descrição'
+        config_options toolbar: { fa: true },
+                       html: true, # enables html editor
+                       parserRules: { tags: { p: 1 } }
       end
       field :tags
       field :image

@@ -8,7 +8,7 @@ class Tag < ApplicationRecord
   end
 
   rails_admin do
-    label 'Características ou Cores' 
+    label 'Características ou Cores'
 
     field :id
     field :name
@@ -16,14 +16,14 @@ class Tag < ApplicationRecord
     field :created_at
 
     field :name do
-      label "nome"
+      label 'nome'
     end
 
     field :tag_group do
-      label "Categoria"
+      label 'Categoria'
     end
     field :created_at do
-      label "Data de criação"
+      label 'Data de criação'
     end
 
     edit do

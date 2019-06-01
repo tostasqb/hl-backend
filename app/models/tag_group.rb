@@ -16,13 +16,13 @@ class TagGroup < ApplicationRecord
     field :visible
 
     field :name do
-      label "Nome"
+      label 'Nome'
     end
     field :ordar do
-      label "Ordem"
+      label 'Ordem'
     end
     field :visible do
-      label "Visível"
+      label 'Visível'
     end
 
     edit do
@@ -34,7 +34,7 @@ class TagGroup < ApplicationRecord
       end
     end
   end
-  
+
   def default_values
     self.ordar ||= 999_999
   end
