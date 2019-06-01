@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c8bee56cfd8d46ed8c351e31aba14c45)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tostasqb/hl-backend&amp;utm_campaign=Badge_Grade)
+
 # Getting started
 
 - Rename the .env and provide the infomation requested there.
