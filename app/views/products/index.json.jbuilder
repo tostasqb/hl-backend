@@ -6,7 +6,12 @@ end
 json.data @products do |rec|
   json.id rec.id
   json.title rec.title
-  json.description ActionView::Base.full_sanitizer.sanitize(rec.description)
+  json.description ActionView::Base.full_sanitizer.sanitize(
+    rec.description.gsub('<br>', ' <br>')
+                   .gsub('</div>', ' </div>')
+                   .gsub('   ', ' ')
+                   .gsub('  ', ' ')
+  )
   json.image rec.image.variant(
     combine_options: {
       resize: '366',
