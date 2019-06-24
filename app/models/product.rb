@@ -6,7 +6,7 @@ class Product < ApplicationRecord
   default_scope { order(id: :desc) }
 
   rails_admin do
-    label 'Produto'
+    label 'Produtos'
 
     field :id
     field :title

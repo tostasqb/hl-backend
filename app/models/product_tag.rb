@@ -7,7 +7,7 @@ class ProductTag < ApplicationRecord
   self.table_name = 'product_tags'
 
   rails_admin do
-    label 'Características de Produto'
+    label 'Imagens do Produto'
 
     field :id
     field :image
