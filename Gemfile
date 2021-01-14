@@ -4,7 +4,7 @@ ruby '2.5.3'
 gem 'dotenv-rails', groups: [:development, :test] # good to maintain up top
 
 gem 'rails', '~> 5.2'
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 gem 'bootstrap-wysihtml5-rails', '> 0.3.1.24'
 
 gem 'pg', group: :production
