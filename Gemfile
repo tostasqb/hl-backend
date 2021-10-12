@@ -16,7 +16,7 @@ gem "mini_magick"
 
 gem 'kaminari'
 
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 4.3'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
